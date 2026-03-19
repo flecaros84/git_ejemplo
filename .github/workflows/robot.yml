@@ -1,0 +1,15 @@
+name: mi primer robot
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: saludo
+        run: echo "Hola, este es mi primer robot"
+    
