@@ -18,6 +18,6 @@ jobs:
         with:
           context: .
           push: true
-          tags:
+          tags: |
             ${{ secrets.DOCKERHUB_USER }}/mi-nginx:latest
-            ${{ secrets.DOCKERHUB_USER }}/mi-nginx:v${{ github.sha}}
+            ${{ secrets.DOCKERHUB_USER }}/mi-nginx:v${{ github.run_number }}
